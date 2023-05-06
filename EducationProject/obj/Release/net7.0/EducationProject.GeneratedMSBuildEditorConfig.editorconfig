@@ -1,0 +1,181 @@
+is_global = true
+build_property.TargetFramework = net7.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = EducationProject
+build_property.RootNamespace = EducationProject
+build_property.ProjectDir = D:\VS\EducationProject\EducationProject\
+build_property.RazorLangVersion = 7.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = D:\VS\EducationProject\EducationProject
+build_property._RazorSourceGeneratorDebug = 
+
+[D:/VS/EducationProject/EducationProject/Areas/Admin/Views/Assignment/Assignment.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQXNzaWdubWVudFxBc3NpZ25tZW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/VS/EducationProject/EducationProject/Areas/Admin/Views/Assignment/AssignmentDone.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQXNzaWdubWVudFxBc3NpZ25tZW50RG9uZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/VS/EducationProject/EducationProject/Areas/Admin/Views/Assignment/CreateAssignment.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQXNzaWdubWVudFxDcmVhdGVBc3NpZ25tZW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/VS/EducationProject/EducationProject/Areas/Admin/Views/Assignment/showImg.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQXNzaWdubWVudFxzaG93SW1nLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/VS/EducationProject/EducationProject/Areas/Admin/Views/Home/AddTeacher.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZVxBZGRUZWFjaGVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/VS/EducationProject/EducationProject/Areas/Admin/Views/Home/CreateVideo.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZVxDcmVhdGVWaWRlby5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/VS/EducationProject/EducationProject/Areas/Admin/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/VS/EducationProject/EducationProject/Areas/Admin/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/VS/EducationProject/EducationProject/Areas/Admin/Views/Users/EditUser.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVXNlcnNcRWRpdFVzZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/VS/EducationProject/EducationProject/Areas/Admin/Views/Users/GetAllUsers.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVXNlcnNcR2V0QWxsVXNlcnMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/VS/EducationProject/EducationProject/Areas/Admin/Views/Users/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVXNlcnNcUmVnaXN0ZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/VS/EducationProject/EducationProject/Areas/Admin/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/VS/EducationProject/EducationProject/Areas/Admin/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/VS/EducationProject/EducationProject/Views/Home/FirstYear.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxGaXJzdFllYXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/VS/EducationProject/EducationProject/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/VS/EducationProject/EducationProject/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/VS/EducationProject/EducationProject/Views/Home/SecondYear.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTZWNvbmRZZWFyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/VS/EducationProject/EducationProject/Views/Home/ThirdYear.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxUaGlyZFllYXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/VS/EducationProject/EducationProject/Views/Matrials/FirstYearBIORV.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWF0cmlhbHNcRmlyc3RZZWFyQklPUlYuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/VS/EducationProject/EducationProject/Views/Matrials/FirstYearBIOST.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWF0cmlhbHNcRmlyc3RZZWFyQklPU1QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/VS/EducationProject/EducationProject/Views/Matrials/FirstYearCHRV.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWF0cmlhbHNcRmlyc3RZZWFyQ0hSVi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/VS/EducationProject/EducationProject/Views/Matrials/FirstYearCHST.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWF0cmlhbHNcRmlyc3RZZWFyQ0hTVC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/VS/EducationProject/EducationProject/Views/Matrials/SecondYearBIORV.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWF0cmlhbHNcU2Vjb25kWWVhckJJT1JWLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/VS/EducationProject/EducationProject/Views/Matrials/SecondYearBIOST.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWF0cmlhbHNcU2Vjb25kWWVhckJJT1NULmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/VS/EducationProject/EducationProject/Views/Matrials/SecondYearCHRV.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWF0cmlhbHNcU2Vjb25kWWVhckNIUlYuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/VS/EducationProject/EducationProject/Views/Matrials/SecondYearCHST.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWF0cmlhbHNcU2Vjb25kWWVhckNIU1QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/VS/EducationProject/EducationProject/Views/Matrials/sendAssignment.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWF0cmlhbHNcc2VuZEFzc2lnbm1lbnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/VS/EducationProject/EducationProject/Views/Matrials/ThirdYearBIORV.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWF0cmlhbHNcVGhpcmRZZWFyQklPUlYuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/VS/EducationProject/EducationProject/Views/Matrials/ThirdYearBIOST.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWF0cmlhbHNcVGhpcmRZZWFyQklPU1QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/VS/EducationProject/EducationProject/Views/Matrials/ThirdYearCHRV.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWF0cmlhbHNcVGhpcmRZZWFyQ0hSVi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/VS/EducationProject/EducationProject/Views/Matrials/ThirdYearCHST.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWF0cmlhbHNcVGhpcmRZZWFyQ0hTVC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/VS/EducationProject/EducationProject/Views/Matrials/ThirdYearGERV.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWF0cmlhbHNcVGhpcmRZZWFyR0VSVi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/VS/EducationProject/EducationProject/Views/Matrials/ThirdYearGEST.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWF0cmlhbHNcVGhpcmRZZWFyR0VTVC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/VS/EducationProject/EducationProject/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/VS/EducationProject/EducationProject/Views/Shared/_PartialVideos.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9QYXJ0aWFsVmlkZW9zLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/VS/EducationProject/EducationProject/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/VS/EducationProject/EducationProject/Views/Users/AccessDenied.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcQWNjZXNzRGVuaWVkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/VS/EducationProject/EducationProject/Views/Users/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcTG9naW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/VS/EducationProject/EducationProject/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/VS/EducationProject/EducationProject/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/VS/EducationProject/EducationProject/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-14hajrkvv8

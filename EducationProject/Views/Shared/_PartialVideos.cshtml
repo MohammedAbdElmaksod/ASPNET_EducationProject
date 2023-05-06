@@ -1,0 +1,67 @@
+﻿@model TbVideo
+<div class="dropdown-container">
+    <button class=" badge dropdown-toggle text-right " onclick="
+    const list1= document.getElementById('@string.Format("list1{0}",Model.VideoId)')
+
+        if(list1.style.display=='none'){
+        list1.style.display='block';
+        }
+        else
+        {
+        list1.style.display='none';
+        }">
+        @Model.Chapter
+    </button><br><br>@*<img src="~/imgs/MDCS2GYUn 2.png" alt="" srcset="" class="float-left" id="p5">*@
+    <ul style="display: none;" class="list-items-container container" id="@string.Format("list1{0}",Model.VideoId)">
+        <div>
+            <a class="text-right" id="btn"> @Model.Lesson</a><br><br>
+            <ul class="d-flex  " id="v1">
+                @{
+                    var link = "";
+                    foreach (var v in Model.AssignmentLinks)
+                    {
+                        if (v.VideoId == Model.VideoId)
+                        { link = v.Link; }
+                    }
+
+                }
+                <li> <a asp-action="sendAssignment" asp-controller="Matrials" asp-area=""><img src="~/imgs/healthicons_i-exam-multiple-choice.png" alt="" srcset="" width="50" id="v5"></a></li>
+                <li>
+                    <a href="@link"><img src="~/imgs/material-symbols_edit-note-rounded.png" alt="" srcset="" width="50" id="v5"></a>
+                </li>
+                <li>
+                    <button onclick="
+                            let video1=document.getElementById('@string.Format("video{0}",Model.VideoId)');
+                            if(video1.style.display=='none')
+                            {
+                            video1.style.display='block' ;
+                            }
+                            else
+                            {
+                            video1.style.display='none' ;
+                            video1.pause();
+                            }">
+                        <img src="~/imgs/ic_baseline-slow-motion-video.png" alt="" srcset="" width="50" id="vid">
+                    </button>
+                </li>
+
+            </ul>
+            <ul class="d-flex ">
+                <li><h3>الواجب</h3></li>
+
+                <li><h3>اختبر نفسك</h3></li>
+                <li><h3>فيديو</h3></li>
+
+
+            </ul>
+            @*<video id="@string.Format("video{0}",Model.VideoId)" src="@Model.Url"
+                   controls style="display: none;" width="500" height="500" controlslist="nodownload"></video>*@
+            <iframe  style="display: none;" width="716" height="403" id="@string.Format("video{0}",Model.VideoId)" src="@Model.Url" title="@Model.Title" frameborder="0" allow="accelerometer; autoplay;" allowfullscreen></iframe>
+        </div>
+
+
+    </ul>
+
+</div>
+
+<script src="~/main2.js"></script>

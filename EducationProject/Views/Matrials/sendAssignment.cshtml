@@ -1,0 +1,92 @@
+﻿@model AssignmentsDone
+@{
+    Layout = "_Layout";
+}
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <!-- general form elements -->
+            <div class="card card-primary col-md-6">
+                <div class="card-header col-md-12" style="background-color:dodgerblue">
+                    <h3 class="card-title d-flex justify-content-lg-start">إرسال الحل</h3>
+                </div>
+                <!-- /.card-header -->
+                <!-- form start -->
+                <form method="post" asp-action="sendAssignment" asp-controller="Matrials" asp-area="" enctype="multipart/form-data">
+                    <div class="card-body">
+                        <div class="form-group">
+                            <label class="d-flex justify-content-lg-start" @*style="margin-left:75%"*@>الفصل الدراسى</label>
+                            <input asp-for="semester" type="number" class="form-control" placeholder="ادخل الفصل الدراسى رقمياً">
+                            <span style="color:red" asp-validation-for="semester"></span>
+                        </div>
+                        <div class="form-group">
+                            <label class="d-flex justify-content-lg-start" @*style="margin-left:83%"*@>اسم الباب</label>
+                            <input asp-for="chapter" type="text" class="form-control" placeholder="الباب">
+                            <span style="color:red" asp-validation-for="chapter"></span>
+                        </div>
+                        <div class="form-group">
+                            <label class="d-flex justify-content-lg-start">اسم الدرس</label>
+                            <input asp-for="lesson" type="text" class="form-control" placeholder="الدرس">
+                            <span style="color:red" asp-validation-for="lesson"></span>
+                        </div>
+                        <div class="form-group">
+                            <label class="d-flex justify-content-lg-start" for="exampleInputFile">رفع صورة</label>
+                            <div class="input-group">
+                                <div class="custom-file">
+                                    <input asp-for="imgUrl" type="file" name="file" onchange="document.getElementById('fileName').innerHTML=this.value" class="custom-file-input">
+
+                                    <label id="fileName" class="custom-file-label d-flex justify-content-lg-end"></label>
+                                </div>
+                            </div>
+                            <span id="url" class="d-flex justify-content-lg-start" style="color:red" asp-validation-for="imgUrl"></span>
+                        </div>
+                        <div class="form-group">
+                            <label class="d-flex justify-content-lg-start">السنة الدراسية</label>
+                            <select asp-for="levelId" type="text" class="form-control"
+                                    asp-items="@(new SelectList(ViewBag.Levels,"LevelId","YearLevel"))">
+                                <option></option>
+                            </select>
+                            <span style="color:red" class="d-flex justify-content-lg-start" asp-validation-for="levelId"></span>
+                        </div>
+                        <div class="form-group">
+                            <label class="d-flex justify-content-lg-start">اختيار المادة</label>
+                            <select asp-for="MatrialId" type="text" class="form-control"
+                                    asp-items="@(new SelectList(ViewBag.matrilas,"MatrialId","MatrialName"))">
+                                <option></option>
+                            </select>
+                            <span style="color:red" asp-validation-for="MatrialId"></span>
+                        </div>
+                        <div class="form-group">
+                            <label class="d-flex justify-content-lg-start">اختيار المدرس</label>
+                            <select asp-for="teacherId" type="text" class="form-control"
+                                    asp-items="@(new SelectList(ViewBag.Teachers,"TeacherId","TeacherName"))">
+                                <option></option>
+                            </select>
+                            <span class="d-flex justify-content-lg-start" style="color:red" asp-validation-for="teacherId"></span>
+                        </div>
+                        <div class="form-group">
+                            <label class="d-flex justify-content-lg-start">اختيار الواجب</label>
+                            <select asp-for="AssignmentId" type="text" class="form-control"
+                                    asp-items="@(new SelectList(ViewBag.Assignment,"AssignmentId","AssignmentTitle"))">
+                                <option></option>
+                            </select>
+                            <span style="color:red" class="d-flex justify-content-lg-start" asp-validation-for="AssignmentId"></span>
+                        </div>
+                    </div>
+                    <!-- /.card-body -->
+
+                    <div class="card-footer">
+                        <button type="submit" class="btn btn-primary text-white">إرسال</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

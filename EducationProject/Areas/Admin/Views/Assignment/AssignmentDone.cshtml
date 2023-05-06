@@ -1,0 +1,62 @@
+﻿@model List<AssignmentsDone>
+@{
+    Layout = "_Layout";
+}
+
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-header">
+                <a style="margin-left:35%" asp-area="Admin" asp-controller="Assignment" asp-action="CreateAssignment" class="btn btn-primary">اضافة تمرين</a>
+                <h3 style="margin-left:47%" class="card-title">كل الواجبات</h3>
+
+            </div>
+            <!-- /.card-header -->
+            <div class="card-body table-responsive p-0">
+                <table class="table table-hover text-nowrap">
+                    <thead>
+                        <tr>
+                            <th>تم اجازه</th>
+                            <th>صورة الحل</th>
+                            <th>اسم المدرس</th>
+                            <th>اسم الدرس</th>
+                            <th>المادة الدراسية</th>
+                            <th>اسم الباب</th>
+                            <th>السنة الدراسية</th>
+                            <th>لينك التمرين</th>
+                            <th>اسم الطالب</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                @if (item.Done == true)
+                                {
+                                    <td>✔</td>
+                                }
+                                else
+                                {
+                                    <td>❌</td>
+                                }
+                                <td>
+                                    <a asp-action="showImg" asp-area="Admin" asp-controller="Assignment" asp-route-src="@string.Format("/Uploads/Images/{0}",item.imgUrl)"><img src="@string.Format("/Uploads/Images/{0}",item.imgUrl)" width="40px" height="40px" /></a>
+                                </td>
+                                <td>@item?.teacher?.TeacherName</td>
+                                <td>@item?.lesson</td>
+                                <td>@item?.Matrial?.MatrialName</td>
+                                <td>@item?.chapter</td>
+                                <td>@item?.level?.YearLevel</td>
+                                <td><a href="@item?.Assignment?.Link">@item?.Assignment?.Link</a></td>
+                                <td>@item?.StudentUser.FullName</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+            <!-- /.card-body -->
+        </div>
+        <!-- /.card -->
+    </div>
+</div>

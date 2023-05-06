@@ -1,0 +1,41 @@
+﻿@{
+    Layout = "_layout";
+}
+@section Styles{
+    <link href="~/css/sub3.css" rel="stylesheet" />
+}
+<section class="">
+    <div class="photo">
+        <img src="~/imgs/sub.png" alt="...">
+    </div>
+</section>
+<section class="section2">
+    <p class="text-center">المواد المقرره</p>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-6 col-sm-12 space">
+                <a asp-action="ThirdYearCHST" asp-area="" asp-controller="Matrials">
+                    <p>
+                <img src="~/imgs/Rectangle 9.png" class="rounded float-start" alt="..." width="300"><br />
+                الكيمياء</p></a>
+            </div>
+            <div class="col-md-6 col-sm-12 space">
+                <a asp-action="ThirdYearBIOST" asp-area="" asp-controller="Matrials">
+                    <p>
+                <img src="~/imgs/Rectangle 10.png" class="rounded float-end" alt="..." width="300"><br />
+                الاحياء</p></a>
+            </div>
+            <div class="col-md-12 col-sm-12 space">
+                <a asp-action="ThirdYearGEST" asp-area="" asp-controller="Matrials">
+                    <p>
+                <img src="~/imgs/Rectangle 8.png" class="rounded float-end" alt="..." width="300"><br />
+                البيئه والجيولوجيا</p></a>
+            </div>
+        </div>
+
+
+    </div>
+</section>
+
+<br>
+

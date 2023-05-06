@@ -1,0 +1,85 @@
+﻿@model List<ApplicationUser>
+@{
+    Layout = "_Layout";
+}
+
+<div class="card-body table-responsive p-0">
+    <div class="row">
+        <a asp-action="subscribe" asp-area="Admin" asp-controller="Home" class="btn btn-primary m-2">All Subscribe</a>
+        <a asp-action="noSubscribe" asp-area="Admin" asp-controller="Home" class="btn btn-warning m-2">All Not Subscribe</a>
+    </div>
+    <table class="table table-hover text-nowrap">
+        <thead>
+            <tr>
+                <th>اجراءات</th>
+                <th>مشترك</th>
+                <th>الكود</th>
+                <th>المادة</th>
+                <th>اسم المسخدم</th>
+                <th>الاسم</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        <a asp-route-userName="@item.UserName" class="btn btn-warning" asp-controller="Users" asp-action="EditUser" asp-area="Admin">تعديل</a>
+                        <a asp-route-userName="@item.UserName" class="btn btn-danger" asp-controller="Users" asp-action="DeleteUser" asp-area="Admin">حذف</a>
+                    </td>
+                    <td>
+                        @{
+                            string result = "";
+                            if (item.Subscribe == true)
+                            {
+                                result = "نعم";
+                            }
+                            else
+                            {
+                                result = "لا";
+                            }
+
+                        }
+                        @result
+                    </td>
+                    <td>@item.Code</td>
+                    <td>
+                        @{
+                            string matrial = "";
+                            switch (item.Code.Substring(0, 3))
+                            {
+                                case "ch1":
+                                    matrial = "كيمياء الصف الاول";
+                                    break;
+                                case "ch2":
+                                    matrial = "كيمياء الصف الثانى";
+                                    break;
+                                case "ch3":
+                                    matrial = "كيمياء الصف الثالث ";
+                                    break;
+                                case "bi1":
+                                    matrial = "احياء الصف الاول";
+                                    break;
+                                case "bi2":
+                                    matrial = "احياء الصف الثانى";
+                                    break;
+                                case "bi3":
+                                    matrial = "احياء الصف الثالث";
+                                    break;
+                                case "ge3":
+                                    matrial = "جيولوجيا الصف الثالث";
+                                    break;
+                                default:
+                                    matrial = "";
+                                    break;
+                            }
+                        }
+                        @matrial
+                    </td>
+                    <td>@item.UserName</td>
+                    <td>@item.FullName</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

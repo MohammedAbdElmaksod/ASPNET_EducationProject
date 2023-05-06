@@ -1,0 +1,94 @@
+﻿@model TbVideo
+@{
+    Layout = "_Layout";
+}
+<div class="col-md-12">
+    <!-- general form elements -->
+    <div class="card card-primary col-md-6" style="margin-left:25%; margin-top:7%">
+        <div class="card-header col-md-12">
+            <h3 class="card-title">@ViewBag.state</h3>
+        </div>
+        <!-- /.card-header -->
+        <!-- form start -->
+        <form method="post" asp-action="CreateVideo" enctype="multipart/form-data">
+            @if (ViewBag.state == "تعديل الفيديو")
+            {
+                <input type="hidden" asp-for="VideoId" />
+            }
+            <div class="card-body">
+                <div class="form-group">
+                    <label>الفصل الدراسى</label>
+                    <input asp-for="semester" type="number" class="form-control" placeholder="ادخل الفصل الدراسى رقمياً">
+                    <span style="color:red" asp-validation-for="semester"></span>
+                </div>
+                <div class="form-group">
+                    <label>عنوان الباب</label>
+                    <input asp-for="Chapter" type="text" class="form-control" placeholder="ادخل عنوان الباب">
+                    <span style="color:red" asp-validation-for="Chapter"></span>
+                </div>
+                <div class="form-group">
+                    <label>عنوان الدرس</label>
+                    <input asp-for="Lesson" type="text" class="form-control" placeholder="ادخل عنوان الدرس">
+                    <span style="color:red" asp-validation-for="Lesson"></span>
+                </div>
+                <div class="form-group">
+                    <label>عنوان الفيديو</label>
+                    <input asp-for="Title" type="text" class="form-control" placeholder="ادخل عنوان الفيديو">
+                    <span style="color:red" asp-validation-for="Title"></span>
+                </div>
+                <div class="form-group">
+                    <label>لينك الفيديو</label>
+                    <input asp-for="Url" type="text" class="form-control" placeholder="ادخل لينك الفيديو">
+                    <span style="color:red" asp-validation-for="Url"></span>
+                </div>
+               @* <div class="form-group">
+                    <label for="exampleInputFile">اختيار الفيديو</label>
+                    <div class="input-group">
+                        <div class="custom-file">
+                            <input asp-for="Url" type="file" name="file" onchange="document.getElementById('fileName').innerHTML=this.value" class="custom-file-input">
+
+                            <label id="fileName" class="custom-file-label">اختيار الفيديو</label>
+                        </div>
+                    </div>
+                    <span id="url" style="color:red" asp-validation-for="Url"></span>
+                </div>*@
+                <div class="form-group">
+                    <label>السنة الدراسية</label>
+                    <select asp-for="LevelId" type="text" class="form-control"
+                            asp-items="@(new SelectList(ViewBag.Levels,"LevelId","YearLevel"))">
+                        <option></option>
+                    </select>
+                    <span style="color:red" asp-validation-for="LevelId"></span>
+                </div>
+                <div class="form-group">
+                    <label>اختيار المادة</label>
+                    <select asp-for="MatrialId" type="text" class="form-control"
+                            asp-items="@(new SelectList(ViewBag.matrilas,"MatrialId","MatrialName"))">
+                        <option></option>
+                    </select>
+                    <span style="color:red" asp-validation-for="MatrialId"></span>
+                </div>
+                <div class="form-group">
+                    <label>اختيار المدرس</label>
+                    <select asp-for="TeacherId" type="text" class="form-control"
+                            asp-items="@(new SelectList(ViewBag.Teachers,"TeacherId","TeacherName"))">
+                        <option></option>
+                    </select>
+                    <span style="color:red" asp-validation-for="MatrialId"></span>
+                </div>
+            </div>
+            <!-- /.card-body -->
+
+            <div class="card-footer">
+                <button onclick="let v=document.getElementById('fileName');let u=document.getElementById('url');
+                        if(v.innerHTML.length===0){
+                         u.innerHTML='اختر الفيديو';
+                         }"
+                        type="submit" class="btn btn-primary">
+                    Submit
+                </button>
+                <a asp-action="Index" asp-area="Admin" class="btn btn-secndory" style="margin-left:70%">Cancel</a>
+            </div>
+        </form>
+    </div>
+</div>

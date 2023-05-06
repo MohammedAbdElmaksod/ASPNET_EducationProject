@@ -1,0 +1,99 @@
+﻿@model List<TbVideo>
+
+@{
+    Layout = "_layout";
+}
+
+
+<section class="">
+    <div class="photo">
+        <img src="~/imgs/sub.png" alt="...">
+    </div>
+</section>
+<br>
+<br>
+<br>
+<section class="section2">
+    <div class="container">
+        <p class="text-right"></p>
+    </div>
+    <br><br>
+    <div class="container">
+        <a href="http://"><p class="text-left"></p></a>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-7 col-sm-12">
+                <img src="~/imgs/Rectangle 8.png" class="rounded float-start" alt="..." width="300">
+            </div>
+            <div class="col-md-6 col-sm-12">
+            </div>
+
+        </div>
+
+
+    </div>
+</section>
+<br>
+<br>
+<br>
+<section class="section2">
+    <div class="container">
+        <a asp-action="ThirdYearGEST" asp-area="" asp-controller="Matrials" class="float-right fa-2x bold">المنهج</a>
+    </div>
+    <br><br>
+    <div class="container">
+        <a asp-action="ThirdYearGERV" asp-area="" asp-controller="Matrials" class="float-left bolder fa-2x " id="btn10">المراجعات</a>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-6 col-sm-12">
+            </div>
+            <div class="col-md-6 col-sm-12">
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div id="text4" class="text-right"> الفصل الدراسي الاول</div>
+<div id="down1">
+
+    @foreach (var item in Model)
+    {
+
+        if (item.semester == 1)
+        {
+            <partial name="_PartialVideos" model="item"></partial>
+            <img src="~/imgs/MDCS2GYUn 3.png" alt="" srcset="" class="float-left" id="p5">
+        }
+
+    }
+
+</div>
+
+<div id="text4" class="text-right "> الفصل الدراسي الثاني</div>
+
+
+<div id="down4">
+    @foreach (var item in Model)
+    {
+        if (item.semester == 2)
+        {
+            <partial name="_PartialVideos" model="item"></partial>
+            <img src="~/imgs/MDCS2GYUn 3.png" alt="" srcset="" class="float-left" id="p5">
+        }
+    }
+</div>
+
+<br>
+<br>
+<br>
+<br>

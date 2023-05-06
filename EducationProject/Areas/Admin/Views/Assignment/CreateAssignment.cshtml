@@ -1,0 +1,73 @@
+﻿@model TbAssignmentLink
+@{
+    Layout = "_Layout";
+}
+<div class="col-md-12">
+    <!-- general form elements -->
+    <div class="card card-primary col-md-6" style="margin-left:25%; margin-top:7%">
+        <div class="card-header col-md-12">
+            <h3 class="card-title">@ViewBag.state</h3>
+        </div>
+        <!-- /.card-header -->
+        <!-- form start -->
+        <form method="post" asp-action="CreateAssignment" asp-area="Admin" asp-controller="Assignment">
+            @if (ViewBag.state == "Edit Assignment")
+            {
+                <input type="hidden" asp-for="AssignmentId" />
+            }
+            <div class="card-body">
+                <div class="form-group">
+                    <label>Assignment Tittle</label>
+                    <input asp-for="AssignmentTitle" type="text" class="form-control" placeholder="ادخل عنوان التمرين">
+                    <span style="color:red" asp-validation-for="AssignmentTitle"></span>
+                </div>
+                <div class="form-group">
+                    <label>Assignment Link</label>
+                    <input asp-for="Link" type="text" class="form-control" placeholder="ادخل لينك التمرين">
+                    <span style="color:red" asp-validation-for="Link"></span>
+                </div>
+                <div class="form-group">
+                    <label>Year Level</label>
+                    <select asp-for="LevelId" type="text" class="form-control"
+                            asp-items="@(new SelectList(ViewBag.Levels,"LevelId","YearLevel"))">
+                        <option></option>
+                    </select>
+                    <span style="color:red" asp-validation-for="LevelId"></span>
+                </div>
+                <div class="form-group">
+                    <label>Matrial Name</label>
+                    <select asp-for="MatrialId" type="text" class="form-control"
+                            asp-items="@(new SelectList(ViewBag.matrilas,"MatrialId","MatrialName"))">
+                        <option></option>
+                    </select>
+                    <span style="color:red" asp-validation-for="MatrialId"></span>
+                </div>
+                <div class="form-group">
+                    <label>Video</label>
+                    <select asp-for="VideoId" type="text" class="form-control"
+                            asp-items="@(new SelectList(ViewBag.Videos,"VideoId","Title"))">
+                        <option></option>
+                    </select>
+                    <span style="color:red" asp-validation-for="VideoId"></span>
+                </div>
+                <div class="form-group">
+                    <label>Teacher Name</label>
+                    <select asp-for="TeacherId" type="text" class="form-control"
+                            asp-items="@(new SelectList(ViewBag.Teachers,"TeacherId","TeacherName"))">
+                        <option></option>
+                    </select>
+                    <span style="color:red" asp-validation-for="TeacherId"></span>
+                </div>
+            </div>
+            <!-- /.card-body -->
+
+            <div class="card-footer">
+                <button type="submit" class="btn btn-primary">
+                    Submit
+                </button>
+                <a asp-action="Assignment" asp-area="Admin" asp-controller="Assignment" class="btn btn-secndory" style="margin-left:70%">Cancel</a>
+            </div>
+        </form>
+    </div>
+</div>
+

@@ -1,0 +1,51 @@
+﻿@model List<TbAssignmentLink>
+@{
+    Layout = "_Layout";
+}
+
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-header">
+                <a style="margin-left:35%" asp-area="Admin" asp-controller="Assignment" asp-action="CreateAssignment" class="btn btn-primary">اضافة تمرين</a>
+                <h3 style="margin-left:47%" class="card-title">كل الواجبات</h3>
+
+            </div>
+            <!-- /.card-header -->
+            <div class="card-body table-responsive p-0">
+                <table class="table table-hover text-nowrap">
+                    <thead>
+                        <tr>
+                            <th>اجراءات</th>
+                            <th>اسم المدرس</th>
+                            <th>الفيديو</th>
+                            <th>المادة الدراسية</th>
+                            <th>السنة الدراسية</th>
+                            <th>لينك التمرين</th>
+                            <th>عنوان الواجب</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>
+                                    <a asp-route-id="@item.AssignmentId" class="btn btn-warning" asp-action="EditAssignment" asp-area="Admin" asp-controller="Assignment">Edit</a>
+                                    <a asp-route-id="@item.AssignmentId" class="btn btn-danger" asp-action="DeleteAssignment" asp-area="Admin" asp-controller="Assignment">Delete</a>
+                                </td>
+                                <td>@item.Teacher?.TeacherName</td>
+                                <td>@item.video.Title</td>
+                                <td>@item.Matrial?.MatrialName</td>
+                                <td>@item.Level?.YearLevel</td>
+                                <td><a>@item.Link</a></td>
+                                <td>@item.AssignmentTitle</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+            <!-- /.card-body -->
+        </div>
+        <!-- /.card -->
+    </div>
+</div>

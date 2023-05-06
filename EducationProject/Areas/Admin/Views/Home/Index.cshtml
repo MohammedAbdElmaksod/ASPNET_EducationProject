@@ -1,0 +1,53 @@
+﻿@model List<TbVideo>
+@{
+    Layout = "_Layout";
+}
+
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-header">
+                <a style="margin-left:35%" asp-area="Admin" asp-controller="Home" asp-action="CreateVideo" class="btn btn-primary">اضافة فيديو</a>
+                <h3 style="margin-left:47%" class="card-title">كل الفيديوهات</h3>
+
+            </div>
+            <!-- /.card-header -->
+            <div class="card-body table-responsive p-0">
+                <table class="table table-hover text-nowrap">
+                    <thead>
+                        <tr>
+                            <th>اجراءات</th>
+                            <th>اسم المدرس</th>
+                            <th>المادة الدراسية</th>
+                            <th>السنة الدراسية</th>
+                            <th>عنوان الفيديو</th>
+                            <th>الدرس</th>
+                            <th>الباب</th>
+                            <th>الفصل الدراسى</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>
+                                    <a asp-route-id="@item.VideoId" class="btn btn-warning" asp-action="EditVideo" asp-area="Admin">تعديل</a>
+                                    <a asp-route-id="@item.VideoId" class="btn btn-danger" asp-action="DeleteVideo" asp-area="Admin">حذف</a>
+                                </td>
+                                <td>@item.Teacher.TeacherName</td>
+                                <td>@item.Matrial.MatrialName</td>
+                                <td>@item.Level.YearLevel</td>
+                                <td>@item.Title</td>
+                                <td>@item.Lesson</td>
+                                <td>@item.Chapter</td>
+                                <td>@item.semester</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+            <!-- /.card-body -->
+        </div>
+        <!-- /.card -->
+    </div>
+</div>

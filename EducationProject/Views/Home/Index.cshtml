@@ -1,0 +1,288 @@
+﻿@inject Microsoft.AspNetCore.Identity.SignInManager<ApplicationUser> manger
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="~/imgs/logo.png" />
+    <title> الصفحه الرئيسيه  </title>
+    <!--- link css-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+    <link href="~/css/sub2.css" rel="stylesheet" />
+</head>
+
+<body>
+
+    <nav style="z-index:2000" class="navbar navbar-expand-lg navbar-light " dir="rtl">
+        <a class="navbar-brand" asp-action="Index"asp-area=""asp-controller="Home">
+            <img src="~/imgs/WhatsApp_Image_2023-01-21_at_17.00.40-removebg-preview.png"
+                 alt="Logo" width="150" height="" class="d-inline-block align-text-center">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li  class="nav-item active">
+                    <a class="nav-link" asp-action="Index" asp-area="" asp-controller="Home">الرئيسيه <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" asp-action="FirstYear" asp-area="" asp-controller="Home">الصف الأول</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" asp-action="SecondYear" asp-area="" asp-controller="Home">الصف الثانى</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" asp-action="ThirdYear" asp-area="" asp-controller="Home">الصف الثالث</a>
+                </li>
+                @if (manger.IsSignedIn(User))
+                {
+                    <li class="nav-item">
+                        <a class="nav-link" asp-action="Logout" asp-area="" asp-controller="Users">تسجيل الخروج</a>
+                    </li>
+                }
+                else
+                {
+                    <li class="nav-item">
+                        <a class="nav-link" asp-action="Login" asp-area="" asp-controller="Users">تسجيل الدخول</a>
+                    </li>
+                }
+                @if (manger.IsSignedIn(User) && User.IsInRole("adm"))
+                {
+                    <li class="nav-item">
+                        <a class="nav-link" asp-action="Index" asp-area="Admin" asp-controller="Home">الأدمن</a>
+                    </li>
+                }
+                <li class="nav-item">
+                    <a class="nav-link" href="#contect">تواصل معنا</a>
+                </li>
+
+            </ul>
+        </div>
+    </nav>
+
+
+
+    <section class="section1">
+        <img src="~/imgs/Group 2.png" alt="" class="big">
+        <div>
+            <img src="~/imgs/Kids Studying from Home-bro 1 1.png" alt="" class="big1">
+        </div>
+        <div>
+            <div class="d-flex align-items-end flex-column mb-4" style="height: 200px;">
+                <div class="mb-auto p-2"></div>
+                <div class="p-2"></div>
+                <div class="p-2 col-4 text-center4 takeTime"> خد وقتك واتعلم من اي مكان  </div>
+            </div>
+
+        </div>
+        <div>
+            <img src="~/imgs/Group 15.png" alt="" class="big2">
+        </div>
+    </section>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+@*    <section class="section2">
+        <p class="text-center">لماذا جهبز الافضل؟ </p>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-6 col-sm-12">
+
+                    <p id="concept">
+                        شاهد الفيديو لتعرف عن جهبز وكتابه المزيد <br><br>
+                        عن ما يشرحه الفيديو التوضيحي
+                    </p>
+                    <br><br>
+                    <p id="concept">
+                        حيث الفيديو طريقه التعامل مع منصتنا
+                        <br><br>
+                        كيفيه تتجاوز الاختبار؟
+                        <br><br>
+                        المراجعات
+                    </p>
+                </div>
+                <div class="col-md-6 col-sm-12">
+
+                    <video src="" controls controlslist="nodownload" width="300"></video>
+                </div>
+
+            </div>
+
+        </div>
+
+        </div>
+
+    </section>*@
+
+    <br>
+    <br>
+    <section>
+        <section class="section2">
+            <p class="text-center">لماذا جهبز الافضل؟ </p>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-6 col-sm-12">
+                        <img src="~/imgs\Thesis-pana 1 1.png" class="rounded float-start" alt="..." width="100" height="400">
+
+                    </div>
+
+                    <div class="col-md-6 col-sm-12">
+                        <div class="d-flex flex-row mb-2">
+                            <div class="p-2 col-6">
+                                <img src="~/imgs/Group 8.png" alt="" srcset="">
+                                <p class="text-center0">مناقشات قويه</p>
+                            </div>
+                            <div class="p-2">
+                                <img src="~/imgs/Group 9.png" alt="" srcset="" width="">
+                                <p class="text-center0">تمارين متكامله</p>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-row mb-2">
+                            <div class="p-2 col-6">
+                                <img src="~/imgs\Group 10.png" alt="" srcset="">
+                                <p class="text-center0">التعاون والمناقشه </p>
+                            </div>
+                            <div class="p-2">
+                                <img src="~/imgs/Group 11.png" alt="" srcset="" width="">
+                                <p class="text-center0">سهوله الاستخدام</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </section>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <section class="section2">
+        <p class="text-center">عن جهبز</p>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-6 col-sm-12">
+                    <p id="concept">
+                        دعنا ننمو بمستواك التعليمي مع جهبز<br><br>
+                        حيث نوفر لك منصه كامله بها الشرح والمراجعات والامتحانات<br><br>
+                        لتوفير الراحه والرفاهيه لك وتطوير ذاتك<br>
+
+                    </p>
+
+                </div>
+                <div class="col-md-6 col-sm-12">
+
+                    <img src="~/imgs/freepik--Character--inject-17.png" width="300">
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="section2">
+        <p class="text-center">الصفوف المقرره</p>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-6 col-sm-12">
+                    <a asp-action="FirstYear" asp-area="" asp-controller="Home"><img src="~/imgs/Ellipse 11.png" class="rounded float-start" alt="..." width="300"></a>
+                    <a asp-action="FirstYear" asp-area="" asp-controller="Home"><p>الصف الاولى الثانوي</p></a>
+                </div>
+                <div class="col-md-6 col-sm-12">
+                    <a asp-action="SecondYear" asp-area="" asp-controller="Home"><img src="~/imgs/Ellipse 12.png" width="300"></a>
+                    <a asp-action="SecondYear" asp-area="" asp-controller="Home"> <p>الصف الثاني الثانوي </p></a>
+                </div>
+                <div class="col-md-12 col-sm-12">
+                    <a asp-action="ThirdYear" asp-area="" asp-controller="Home"><img src="~/imgs/Ellipse 8.png" class="rounded float-end" alt="..." width="300"></a>
+                    <a asp-action="ThirdYear" asp-area="" asp-controller="Home"><p>الصف الثالث الثانوي</p></a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <br>
+
+    <footer class="last container-fluid" id="contect">
+        <img src="~/imgs/Vector 2.png" alt="" class="backfooter">
+        <div class="main-footer">
+            <img src="~/imgs/logo.png" class="img-fluid" alt="..." width="150">
+
+            <p class="text-center1">
+                دعنا ننمو بمستواك التعليمي مع جهبز حيث نوفر لك منصه كامله بها الشرح والمراجعات والامتحانات
+            </p>
+            <p class="text-center2">لتوفير الراحه والرفاهيه لك وتطوير ذاتك</p>
+        </div>
+        <div class="row align-items-center">
+            <div class="col-md-6 col-sm-12 right">
+                <div class="base">
+                    <img src="~/imgs/material-symbols_call.png" class="rounded float-end" alt="..." width="100">
+                    <p class="text-end1">يمكنك تواصل معنا الان.</p>
+                </div>
+                <div class="second-base">
+                    <p class="text-end1"> رقم الهاتف 1: 01033682834 .</p>
+                    <p class="text-end2">رقم الهاتف2 :01024290987.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-sm-12 left">
+                <div class="icons">
+                    <a href="https://www.facebook.com/profile.php?id=100084762666553&amp;mibextid=ZbWKwL" class="text1"
+                       target="_blank"> facebook<img src="~/imgs/facebook.png" alt="" srcset="" class="facebook"></a>
+                    <br>
+                    <a href="mailto:" mohamedfasiel66@gmail.com="" class="text2" target="_blank">
+                        google <img src="~/imgs//google.png" alt="" srcset="" class="google">
+                    </a>
+                    <br>
+                    <a href="https://www.youtube.com/@@feselstienechemistry8587" class="text3" target="_blank">
+                        Youtube<img src="~/imgs/youtube.png" alt="" srcset=""
+                                    class="youtube">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+
+
+
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+    <script src="~/main2.js">
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,72 @@
+﻿@model TbTeacher
+@{
+    Layout = "_Layout";
+}
+<div class="col-md-12">
+    <!-- general form elements -->
+    <div class="card card-primary col-md-6" style="margin-left:25%; margin-top:7%">
+        <div class="card-header col-md-12">
+            <h3 class="card-title">@ViewBag.teacher معلم</h3>
+        </div>
+        <!-- /.card-header -->
+        <!-- form start -->
+        <form method="post" asp-action="AddTeacher" enctype="multipart/form-data">
+            @if (ViewBag.teacher == "تعديل")
+            {
+                <input type="hidden" asp-for="TeacherId" />
+            }
+            <div class="card-body">
+                <div class="form-group">
+                    <label>اسم المدرس</label>
+                    <input asp-for="TeacherName" type="text" class="form-control" placeholder="ادخل اسم المدرس">
+                    <span style="color:red" asp-validation-for="TeacherName"></span>
+                </div>
+                <div class="form-group">
+                    <label>اختيار المادة</label>
+                    <select asp-for="MatrialId" type="text" class="form-control"
+                            asp-items="@(new SelectList(ViewBag.matrilas,"MatrialId","MatrialName"))">
+                        <option></option>
+                    </select>
+                    <span style="color:red" asp-validation-for="MatrialId"></span>
+                </div>
+            </div>
+            <!-- /.card-body -->
+
+            <div class="card-footer">
+                <button onclick="let v=document.getElementById('fileName');let u=document.getElementById('url');
+                        if(v.innerHTML.length===0){
+                         u.innerHTML='اختر الفيديو';
+                         }"
+                        type="submit" class="btn btn-primary">
+                    @ViewBag.teacher
+                </button>
+                @*<a asp-action="Index" asp-area="Admin" class="btn btn-secndory" style="margin-left:70%">Cancel</a>*@
+            </div>
+        </form>
+    </div>
+    <div class="card-body table-responsive p-0">
+        <table class="table table-hover text-nowrap">
+            <thead>
+                <tr>
+                    <th>اجراءات</th>
+                    <th>المادة</th>
+                    <th>اسم المدرس</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in ViewBag.teachers)
+                {
+                    <tr>
+                        <td>
+                            <a asp-route-id="@item.TeacherId" class="btn btn-warning" asp-action="EditTeacher" asp-area="Admin">تعديل</a>
+                            <a asp-route-id="@item.TeacherId" class="btn btn-danger" asp-action="DeleteTeacher" asp-area="Admin">حذف</a>
+                        </td>
+                        <td>@item.Matrial.MatrialName</td>
+                        <td>@item.TeacherName</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
